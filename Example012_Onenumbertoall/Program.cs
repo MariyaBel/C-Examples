@@ -4,17 +4,22 @@
 // task 5
 
 Console.Write("Input number: ");
-int n = Convert.ToInt32(Console.ReadLine());
-for (int i = (-1) * n; i <= n; i++)
-    Console.Write(i + " ");
 
-// task 5
-Console.Write("Input number: ");
 int n = Convert.ToInt32(Console.ReadLine());
-int i = (-1) * n;
+
+//решение 1
+//for (int i = (-1) * n; i <= n; i++)// решение через оператор for
+//Console.Write(i + " ");// запись числа с пробелом
+
+//решение 2
+int i = (-1) * n;// перевод числа в его же со знаком -
 while (i <= n)
 {
-    Console.Write(i);
-    Console.Write(", ");
+    Console.Write(i);// вывод числа
+        while (i<n) // миницикл ставит запятую после числа
+        {
+        Console.Write(", ");
+        break;
+        }
     i++;
 }
