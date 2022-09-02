@@ -23,3 +23,21 @@ void CompraiseNumbers()
 }
 
 CompraiseNumbers();
+
+// Вариант 2 - склеить как текст 
+
+// int GenerateRandomNumber()
+// {
+//     int n = new Random().Next(100, 1000);
+//     return n;
+// }
+
+// void CompraiseNumbers()
+// {
+//     int n = GenerateRandomNumber();
+//     Console.WriteLine(n);
+//     Console.Write(Convert.ToString(n)[0]);
+//     Console.Write(Convert.ToString(n)[2]);
+// } 
+
+// CompraiseNumbers();
