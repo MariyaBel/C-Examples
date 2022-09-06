@@ -9,7 +9,7 @@
 Console.Clear();
 Console.WriteLine("Input coordinates of the first dot (X1)");
 int x1 = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Input coordinates of the first dot(Y2)");
+Console.WriteLine("Input coordinates of the first dot(Y1)");
 int y1 = Convert.ToInt32(Console.ReadLine());
 
 Console.WriteLine("Input coordinates of the second dot (X2)");
