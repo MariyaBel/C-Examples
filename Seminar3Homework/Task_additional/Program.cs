@@ -3,7 +3,7 @@
 // 2 стр - через пробел располагается N целых чисел, разделенных пробелами (среднесут темп). 
 // Температуры – целые числа и лежат в диапазоне от –50 до 50.
 // вывод: одно число – длину самой продолжительной оттепели (max последовательных дней >0).
-// Решать циклом
+// Решать циклом, без массива
 
 Console.Clear();
 Console.WriteLine("Input number of days in a period (from 1 to 100): ");
@@ -12,7 +12,7 @@ int n = Convert.ToInt32(Console.ReadLine());
 int plusperiod = 0;// длительность периода оттепели
 int plusperiodmax = 0;// длительность макс периода оттепели
 
-Console.WriteLine("Input temperature (from -50 to 500 for each day: ");//строка до цикла,чтобы не повторять запрос
+Console.WriteLine("Input temperature (from -50 to 50 C) for each day: ");//строка до цикла,чтобы не повторять запрос
 int t = Convert.ToInt32(Console.ReadLine());// температура 1го дня общего периода
 
 // строки 20-24 проверяют попадает ли 1 день в период оттепели.
