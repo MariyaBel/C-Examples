@@ -2,11 +2,14 @@
 // 3, 5 -> 243 (3⁵)
 // 2, 4 -> 16
 
-for (int i=1; i<=2; i++)
-Console.WriteLine("Input number:");
-int i = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Input first number:");
+int a = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Input second number:");
+int b = Convert.ToInt32(Console.ReadLine());
+int res=a;// можно int res=1
+for (int i = 1; i < b; i++) // если int res= 1 то for (int i=0; i<b, i++)
+{
+    res = res*a;
+}
 
-int res = Math.Pow(i,);
-
-for (int res = 1;
-)
+Console.Write(res);

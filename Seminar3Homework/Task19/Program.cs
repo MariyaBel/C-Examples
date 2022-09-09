@@ -14,10 +14,9 @@ if ((x/10000)==(x%10)&&(((x/1000)%10)==(x/10)%10)) Console.WriteLine ("yes,it's 
 else Console.WriteLine ("No,it's not a palyndrome");
 
 //Решение через строку
-// Выдает ошибку - не тот тип данных. стр. 20
 
-// Console.WriteLine("Input a 5digit number:");
-// int n = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Input a 5digit number:");
+string n = Console.ReadLine();
 
-// if ((Convert.ToString(n)[1] == Convert.ToString(n)[5]) && (Convert.ToString(n)[2] == Convert.ToString(n)[4])) Console.WriteLine("yes,it's a palyndrome");
-// else Console.WriteLine("No,it's not a palyndrome");
+if (((n)[0] == (n)[4]) && ((n)[1] == (n)[3])) Console.WriteLine("yes,it's a palyndrome");
+else Console.WriteLine("No,it's not a palyndrome");
