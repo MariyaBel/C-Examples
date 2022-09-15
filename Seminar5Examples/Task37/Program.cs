@@ -20,6 +20,7 @@ void Pairresult(int[] array)//  фукнция поиска пары
     else
         lenArray = array.Length / 2 + 1;// если нечетное + 1 (добавляем серединный элемент)
 
+
     int[] ResultArray = new int[lenArray];// cоздаем новый массив (результат произведений)
 
     for (int i = 0; i < lenArray; i++)// цикл до середины масива

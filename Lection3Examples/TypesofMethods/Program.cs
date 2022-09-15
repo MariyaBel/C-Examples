@@ -5,7 +5,7 @@ void Method1()
 {
     Console.WriteLine("Surname,name");// метод, выводящий подпись
 }
-Method1("Beliakova Maria);
+Method1("Beliakova Maria");
 
 // Метод 2. Принимает, но не возвращает
 void Method2(string msg)
