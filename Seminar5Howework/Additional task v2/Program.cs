@@ -29,7 +29,7 @@ int[] ShiftArray(int[] array)// функция по сдвигу массива
             if (k < 0)// сдвиг влево не работает!
             {
                 int aLast = array[0];
-                for (int j = 0; j >= array.Length - 2; j++)// эта строка не работает
+                for (int j = 0; j <= array.Length - 2; j++)// эта строка не работает
                     array[j]=array[j+1];// эта строка не работает
                 array[array.Length - 1] = aLast;
             }
