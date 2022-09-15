@@ -28,9 +28,9 @@ int [] ShiftArray(int[] array)
 
     int[] shifted_array = new int[array.Length]; // создание 2го массива (первый сдвиг)
 
-    for (int shift = 0; shift <= Math.Abs(a) - 1; shift++)//цикл на число повторов = абс значению а (Math.Abs(a))
+    for (int shift = 0; shift <= Math.Abs(k) - 1; shift++)//цикл на число повторов = абс значению а (Math.Abs(a))
     {
-        if (a > 0)// при выполнении условия сдвигаем все значения на 1 шаг вправо
+        if (k > 0)// при выполнении условия сдвигаем все значения на 1 шаг вправо
         {
             int temp = array[array.Length - 1];// запоминаем последний элемент
             for (int j = 1; j <= array.Length - 1; j++)
@@ -50,7 +50,7 @@ int [] ShiftArray(int[] array)
         for (int l = 0; l <= array.Length - 1; l++)
             array[l] = shifted_array[l];
     }
-    Console.WriteLine("Final array: [" + string.Join(", ", shifted_array) + "]");
+    //Console.WriteLine("Final array: [" + string.Join(", ", shifted_array) + "]");
     return array;
 }
 
@@ -59,5 +59,6 @@ int n = Convert.ToInt32(Console.ReadLine());
 int[] arr = new int[n];// задали массив
 InputArray(arr);
 ShiftArray(arr);
+Console.WriteLine("Final array: [" + string.Join(", ", ShiftArray(arr)) + "]");
 
 
