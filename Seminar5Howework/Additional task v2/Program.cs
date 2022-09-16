@@ -26,20 +26,26 @@ int[] ShiftArray(int[] array)// функция по сдвигу массива
     {
         for (int i = 0; i < Math.Abs(k); i++)
         {
-            if (k < 0)// сдвиг влево не работает!
-            {
-                int aLast = array[0];
-                for (int j = 0; j <= array.Length - 2; j++)// эта строка не работает
-                    array[j]=array[j+1];// эта строка не работает
-                array[array.Length - 1] = aLast;
-            }
-            if (k > 0)
-            {
-                int aLast = array[array.Length - 1];
-                for (int j = array.Length - 1; j >= 1; j--)
-                    array[j] = array[j - 1];
-                array[0] = aLast;
-            }
+            if (k < 0) k = array.Length - k;// короткий способ, позволяет сократить код. Сдвиг вправо на k = сдвиг влево на n-k
+            int aLast = array[array.Length - 1];
+            for (int j = array.Length - 1; j >= 1; j--)
+                array[j] = array[j - 1];
+            array[0] = aLast;
+
+            // Длинный способ. 2 разных способа заполнения вправо и влево
+            // if (k < 0)  
+            // {
+            //     int aLast = array[0];
+            //     for (int j = 0; j <= array.Length - 2; j++)
+            //         array[j]=array[j+1];
+            //     array[array.Length - 1] = aLast;
+            // }
+            // if (k > 0)
+            // {
+            //     int aLast = array[array.Length - 1];
+            //     for (int j = array.Length - 1; j >= 1; j--)
+            //         array[j] = array[j - 1];
+            //     array[0] = aLast;
         }
     }
     return array;
