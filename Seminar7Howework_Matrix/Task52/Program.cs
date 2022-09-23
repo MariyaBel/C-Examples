@@ -30,14 +30,16 @@ void PrintMatrix(int[,] matrix)// вывод матрицы на экран
 
 void ReleaseJAverage(int[,] matrix)
 {
-    int sum = 0;
+
     for (int j = 0; j < matrix.GetLength(1); j++)
     {
+        int sum = 0;
+        int median = 0;
         for (int i = 0; i < matrix.GetLength(1); i++)
         {
             sum += matrix[i, j];
         }
-        Console.Write("sum="+sum+ " ");
+        Console.Write("med=" + sum / matrix.GetLength(1) + " ");
     }
 }
 
