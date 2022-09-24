@@ -31,33 +31,32 @@ void PrintMatrix(int[,] matrix)// вывод матрицы на экран
     }
 }
 
-void ReleaseMatrix(int[,] matrix)// упорядочение строк по убыванию
+void ReleaseMatrix(int[,] matrix)// упорядочение каждой строки (выборкой)
 {
-    
-    int[,] ResultMatrix = new int[matrix.GetLength(0), matrix.GetLength(1)];
-    int max=matrix[i,0];
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
-        int k=1;
-        for (int j = k; j < n; j++)
-        matrix [i,0]=temp
-        if (matrix [i,j]>max)
+        for (int j = 0; j < matrix.GetLength(1) - 1; j++)
         {
-            ResultMatrix[i;k]=matrix[i,j];
-            k++;
-        }
+            int maxPosition = j;
+            for (int k = j + 1; k < matrix.GetLength(1); k++)
+            {
+                if (matrix[i, k] > matrix[i, maxPosition]) maxPosition = k;
+            }
 
-            ResultMatrix[i, j] = matrix[matrix.GetLength(0) - i - 1, j];
+            int temp = matrix[i, j];
+            matrix[i, j] = matrix[i, maxPosition];
+            matrix[i, maxPosition] = temp;
+        }
         Console.WriteLine();
     }
-    PrintMatrix(ResultMatrix);
 }
 
 Console.Write("Input number of rows: ");
 int n = Convert.ToInt32(Console.ReadLine());
 Console.Write("Input number of columns: ");
 int m = Convert.ToInt32(Console.ReadLine());
-int[, ] matrix = new int[n, m];
+int[,] matrix = new int[n, m];
 InputMatrix(matrix);
 PrintMatrix(matrix);
 ReleaseMatrix(matrix);
+PrintMatrix(matrix);
