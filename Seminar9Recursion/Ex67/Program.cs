@@ -8,4 +8,4 @@ if (n < 10) return n;//база: когда доходим до однопоря
 return PrintNumbers(n / 10) + n % 10;// формула суммы цифр: делим на 10 и складываем остатки
 }
 
-Console.WriteLine(PrintNumbers(45321));
+Console.WriteLine(PrintNumbers(453));
